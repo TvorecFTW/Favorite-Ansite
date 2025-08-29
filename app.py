@@ -20,7 +20,7 @@ app = Flask(__name__)
 CORS(app)
 
 # Конфигурация
-DEFAULT_VIRUSTOTAL_API_KEY = os.environ.get('VIRUSTOTAL_API_KEY', "YOUR_API_KEY")
+DEFAULT_VIRUSTOTAL_API_KEY = "YOUR_API_KEY"  # Замените на ваш ключ
 MAX_DEPTH = 2
 TIMEOUT = 10
 HEADERS = {
