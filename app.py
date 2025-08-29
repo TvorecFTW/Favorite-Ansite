@@ -2,7 +2,7 @@ from flask import Flask, request, jsonify, render_template, send_file
 import requests
 import whois
 import socket
-import dns.resolver
+import dns.resolver  # Правильный импорт
 import ssl
 import os
 import json
@@ -14,6 +14,7 @@ from bs4 import BeautifulSoup
 import re
 import csv
 import io
+import time  # Добавляем импорт time
 from flask_cors import CORS
 
 app = Flask(__name__)
@@ -276,6 +277,7 @@ def get_dns_records(domain):
         
         for record_type in record_types:
             try:
+                # Правильное использование dns.resolver
                 answers = dns.resolver.resolve(domain, record_type, raise_on_no_answer=False)
                 if answers.rrset:
                     records[record_type] = [str(r) for r in answers]
