@@ -12,6 +12,10 @@
       "dest": "/app.py"
     },
     {
+      "src": "/static/(.*)",
+      "dest": "/static/$1"
+    },
+    {
       "src": "/api/(.*)",
       "dest": "/app.py"
     },
@@ -19,8 +23,5 @@
       "src": "/(.*)",
       "dest": "/app.py"
     }
-  ],
-  "env": {
-    "VIRUSTOTAL_API_KEY": "@virustotal_api_key"
-  }
+  ]
 }
